@@ -17,8 +17,9 @@ Use this file to carry context between your desktop and laptop Codex sessions.
 - Git email: `92lix89@gmail.com`.
 - GitHub repository: `https://github.com/felixtan0902/codex-sync`.
 - Repository is initialized on `main` and tracks `origin/main`.
-- Initial commit `13e05c8` (`Initial Codex sync setup`) is present locally and on `origin/main`.
-- Desktop has a local handoff update that is being merged with the laptop update.
+- Initial commit `13e05c8` (`Initial Codex sync setup`) is present in history.
+- Latest commit `88eab78` (`Update Codex handoff status`) is present locally and on `origin/main`.
+- Working tree is clean; there is no active rebase or merge conflict.
 
 ## Laptop Status
 
@@ -61,10 +62,8 @@ After pulling the latest project files, ask Codex:
 
 ## Next Steps
 
-- Finish the current desktop rebase conflict by staging this resolved file.
-- Continue the rebase.
-- Push the merged handoff update to GitHub.
 - On the laptop, run `git pull` before continuing work.
+- Before switching devices again, update this handoff file with the latest status, commit, and push.
 - Keep using GitHub as the shared project source.
 
 ## Daily Desktop/Laptop Commands
