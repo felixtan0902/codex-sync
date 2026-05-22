@@ -11,17 +11,33 @@ Use this file to carry context between your desktop and laptop Codex sessions.
 ## Desktop Status
 
 - Git is installed.
-- This folder has been prepared as the sync project folder.
+- This folder is the desktop working copy for the sync project.
 - GitHub CLI is not installed on this desktop.
 - Git user name: `felixtan0902`.
 - Git email: `92lix89@gmail.com`.
 - GitHub repository: `https://github.com/felixtan0902/codex-sync`.
 - Repository is initialized on `main` and tracks `origin/main`.
 - Initial commit `13e05c8` (`Initial Codex sync setup`) is present locally and on `origin/main`.
-- This clone's local Git identity has been configured:
-  - `user.name`: `felixtan0902`
-  - `user.email`: `92lix89@gmail.com`
-- Codex may still need approval for Git operations that write lock files in `.git`.
+- Desktop has a local handoff update that is being merged with the laptop update.
+
+## Laptop Status
+
+- Git was installed successfully on the laptop.
+- The repository was cloned successfully to:
+
+```text
+C:\Users\PF2YQ\Documents\Codex\codex-sync
+```
+
+- Codex on the laptop can open that folder and continue by reading this file.
+
+## Important Decision
+
+- Codex chat history does not automatically sync between desktop and laptop.
+- Project files sync through GitHub.
+- Working context syncs through this `CODEX-HANDOFF.md` file.
+- Before switching devices, update this file, commit, and push.
+- On the other device, pull first, then ask Codex to read this file.
 
 ## How To Hand Off Before Switching Devices
 
@@ -45,20 +61,25 @@ After pulling the latest project files, ask Codex:
 
 ## Next Steps
 
-- On any device, open or clone `https://github.com/felixtan0902/codex-sync`.
-- Before switching devices, update this file with current status, then commit and push.
-- On the other device, run `git pull` before continuing work.
+- Finish the current desktop rebase conflict by staging this resolved file.
+- Continue the rebase.
+- Push the merged handoff update to GitHub.
+- On the laptop, run `git pull` before continuing work.
+- Keep using GitHub as the shared project source.
 
-## Desktop Commands
+## Daily Desktop/Laptop Commands
 
-Initial setup commands, kept for reference:
+Before starting work on a device:
 
 ```powershell
-cd "C:\Users\User\Documents\Codex\2026-05-22\saya-punya-codex-di-desktop-ini"
-git config user.name "felixtan0902"
-git config user.email "92lix89@gmail.com"
-git add .
-git commit -m "Initial Codex sync setup"
-git remote add origin https://github.com/felixtan0902/codex-sync.git
-git push -u origin main
+git pull
 ```
+
+Before switching to the other device:
+
+```powershell
+git add .
+git commit -m "update handoff"
+git push
+```
+
