@@ -16,7 +16,12 @@ Use this file to carry context between your desktop and laptop Codex sessions.
 - Git user name: `felixtan0902`.
 - Git email: `92lix89@gmail.com`.
 - GitHub repository: `https://github.com/felixtan0902/codex-sync`.
-- Codex prepared the files, but the final Git commit/push must be run from normal PowerShell because the Codex sandbox cannot write Git lock files in `.git`.
+- Repository is initialized on `main` and tracks `origin/main`.
+- Initial commit `13e05c8` (`Initial Codex sync setup`) is present locally and on `origin/main`.
+- This clone's local Git identity has been configured:
+  - `user.name`: `felixtan0902`
+  - `user.email`: `92lix89@gmail.com`
+- Codex may still need approval for Git operations that write lock files in `.git`.
 
 ## How To Hand Off Before Switching Devices
 
@@ -40,12 +45,13 @@ After pulling the latest project files, ask Codex:
 
 ## Next Steps
 
-- Run the desktop commands from normal PowerShell.
-- Clone that repository on the laptop.
+- On any device, open or clone `https://github.com/felixtan0902/codex-sync`.
+- Before switching devices, update this file with current status, then commit and push.
+- On the other device, run `git pull` before continuing work.
 
 ## Desktop Commands
 
-Run these from normal PowerShell:
+Initial setup commands, kept for reference:
 
 ```powershell
 cd "C:\Users\User\Documents\Codex\2026-05-22\saya-punya-codex-di-desktop-ini"
